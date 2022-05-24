@@ -4,7 +4,11 @@ import "google/protobuf/empty.proto";
 
 service Entropy {
     // Alice queries for the list of signing parties
-    rpc GetParty (google.protobuf.Empty) returns (stream GetPartyResponse);
+    rpc GetParty (GetPartyRequest) returns (stream GetPartyResponse);
+}
+message GetPartyRequest{
+    // Alice's IP address
+    string address = 1;
 }
 message GetPartyResponse{
     repeated string addresses = 1;
