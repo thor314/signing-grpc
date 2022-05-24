@@ -1,8 +1,8 @@
 syntax = "proto3";
-package signing_grpc;
+package entropy_grpc;
 import "google/protobuf/empty.proto";
 
-service SigningClient{
+service Entropy {
     // Alice queries for the list of signing parties
     rpc GetParty (google.protobuf.Empty) returns (stream GetPartyResponse);
 }

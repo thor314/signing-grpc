@@ -1,4 +1,1 @@
-
-pub mod signing_grpc{
-    tonic::include_proto!("signing_grpc");
-}
+tonic::include_proto!("entropy_grpc");
